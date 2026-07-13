@@ -168,9 +168,28 @@ export default function Footer({
       {/* কপিরাইট বটম বার */}
       <div className="border-t border-white/5 bg-black/20">
         <div className="max-w-7xl w-full mx-auto px-6 md:px-8 py-5 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-gray-500 font-medium">
-          <p>
-            © {new Date().getFullYear()} EVA Battery & Autos. {t.footer.rights}
-          </p>
+          {/* সর্বস্বত্ব এবং ডেভেলপার ক্রেডিট */}
+          <div className="text-center sm:text-left space-y-1">
+            <p>
+              © {new Date().getFullYear()} EVA Battery & Autos.{" "}
+              {t.footer.rights}
+            </p>
+          </div>
+          <div>
+            {" "}
+            <p className="text-[11px] text-gray-600">
+              Developed by{" "}
+              <a
+                href="https://rabbinurmuktar.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-amber-500 hover:underline cursor-pointer transition"
+              >
+                Muktar
+              </a>
+            </p>
+          </div>
+          {/* পলিসি লিংকসমূহ */}
           <div className="flex space-x-6">
             <a href="#" className="hover:text-gray-400 transition">
               {t.footer.privacy}
