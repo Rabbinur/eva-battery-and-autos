@@ -1,175 +1,25 @@
+# ⚡ EVA Battery & Autos
 
-# client-boilerplate
-
-
-A modern **Next.js 16 boilerplate** for building scalable, dynamic, and responsive web applications with **React 19**, **TailwindCSS**, **Radix UI**, and **Redux Toolkit**. This boilerplate is designed to accelerate development by providing pre-configured libraries, UI components, and animations.
+EVA Battery & Autos হলো একটি আধুনিক মাল্টি-ল্যাঙ্গুয়েজ (English & Bangla) ই-কমার্স/শোকেস প্ল্যাটফর্ম। এটি বাংলাদেশে সরাসরি চায়না থেকে আমদানিকৃত প্রিমিয়াম ইলেকট্রিক অটো-রিকশা, উন্নত পানি ব্যাটারি (Lead-acid Batteries) এবং আসল খুচরা যন্ত্রাংশ (Spare Parts) পাইকারি ও খুচরা বিক্রয়ের জন্য তৈরি।
 
 ---
 
-## 🚀 Features
+## ✨ বৈশিষ্ট্যসমূহ (Features)
 
-- **Next.js 16** with Turbopack for faster development  
-- **React 19 & React DOM 19**  
-- **TypeScript ready** with all type definitions  
-- **TailwindCSS 4** for utility-first styling  
-- **Tailwind Animations** with `tailwindcss-animate`  
-
-**Radix UI components included:**
-- Avatar, Dialog, Dropdown Menu, Slot  
-
-**State Management:**
-- Redux Toolkit & Redux Persist for global state  
-- React Redux integration  
-
-**Forms & Inputs:**
-- React Hook Form for easy form handling  
-- OTP Input component (`input-otp`)  
-
-**UI & Animations:**
-- Framer Motion for smooth animations  
-- Lucide React icons  
-- Sonner for toast notifications  
-- Tailwind Merge for conditional Tailwind classes  
-
-**Pre-configured setup:**
-- PostCSS & TailwindCSS  
-- Fully TypeScript-compatible  
-- Optimized for fast builds and responsive layouts  
+*   **🌐 সম্পূর্ণ আন্তর্জাতিকীকরণ (i18n):** ইংরেজি এবং বাংলা ভাষার মধ্যে কোনো ল্যাগ ছাড়াই ডাইনামিক সুইচিং।
+*   **🏎️ ৩ডি ইন্টারঅ্যাক্টিভ হিরো স্লাইডার:** Framer Motion এবং Lucide Icons ব্যবহার করে তৈরি আধুনিক ৩ডি প্যারাল্যাক্স অ্যানিমেশন স্লাইডার।
+*   **🚀 Next.js App Router & SSG:** `generateStaticParams` এবং `generateMetadata` ব্যবহারের মাধ্যমে সেরা SEO এবং দ্রুততম পেজ লোডিং স্পিড।
+*   **📱 রেসপন্সিভ ডিজাইন:** মোবাইল, ট্যাবলেট এবং ডেস্কটপ স্ক্রিনের জন্য ১০০% অপ্টিমাইজড UI (Tailwind CSS)।
+*   **🎯 ডাইনামিক SEO ও ফেভিকন:** লাইট/ডার্ক মোডের জন্য সাদা ব্যাকগ্রাউন্ডের অপ্টিমাইজড Favicon এবং ডাইনামিক কিওয়ার্ডস ও অথর মেটাডাটা।
 
 ---
 
-## 📦 Installation
+## 🛠️ টেক স্ট্যাক (Tech Stack)
 
-Clone the repository:
+*   **ফ্রেমওয়ার্ক:** Next.js (App Router)
+*   **স্টাইল:** Tailwind CSS
+*   **অ্যানিমেশন:** Framer Motion
+*   **আইকন:** Lucide React
+*   **টাইপিং:** TypeScript
 
-```bash
-git clone https://github.com/your-username/donation-client.git
-cd donation-client
-
-
-A modern Next.js 16 boilerplate for building scalable, dynamic, and responsive web applications with React 19, TailwindCSS, Radix UI, and Redux Toolkit. This boilerplate is designed to accelerate development by providing pre-configured libraries, UI components, and animations.
-
-🚀 Features
-
-Next.js 16 with Turbopack for faster development
-
-React 19 & React DOM 19
-
-TypeScript ready with all type definitions
-
-TailwindCSS 4 for utility-first styling
-
-Tailwind Animations with tailwindcss-animate
-
-Radix UI components:
-
-Avatar, Dialog, Dropdown Menu, Slot
-
-Redux Toolkit & Redux Persist for state management
-
-React Hook Form for handling forms easily
-
-Framer Motion for smooth animations
-
-Lucide React icons
-
-OTP Input component (input-otp)
-
-Sonner for toast notifications
-
-Tailwind Merge for conditional Tailwind class management
-
-Pre-configured PostCSS & TailwindCSS setup
-
-Fully TypeScript-compatible
-
-Optimized for fast build and responsive layouts
-
-📦 Installation
-
-Clone the repository:
-
-git clone https://github.com/your-username/donation-client.git
-cd donation-client
-
-
-Install dependencies:
-
-npm install
-
-
-Start the development server:
-
-npm run dev
-
-
-Build for production:
-
-npm run build
-npm start
-
-
-Lint the project:
-
-npm run lint
-
-🛠 Tech Stack
-
-Frontend: Next.js, React 19, TypeScript
-
-UI & Styling: TailwindCSS, Radix UI, Tailwind Animations
-
-State Management: Redux Toolkit, Redux Persist, React Redux
-
-Forms: React Hook Form
-
-Icons & Animations: Lucide React, Framer Motion, Sonner
-
-⚡ Project Structure
-/client-boilerplate
-├─ /components       # Reusable UI components
-├─ /pages            # Next.js pages
-├─ /redux            # Redux store and slices
-├─ /styles           # TailwindCSS and global styles
-├─ /public           # Static assets like images and icons
-├─ /utils            # Utility functions and helpers
-├─ /hooks            # Custom React hooks
-├─ next.config.js    # Next.js configuration
-├─ tailwind.config.js # TailwindCSS configuration
-├─ tsconfig.json     # TypeScript configuration
-
-🌐 Radix UI Components Included
-
-Avatar: User profile images
-
-Dialog: Modals for confirmations and alerts
-
-Dropdown Menu: Menu and navigation dropdowns
-
-Slot: Component composition helper
-
-🎨 Styling & Animations
-
-TailwindCSS 4 with custom utilities
-
-tailwindcss-animate for pre-defined animations
-
-Framer Motion for smooth transitions
-
-Gradient backgrounds, loaders, and card styles pre-configured
-
-💡 Usage
-
-Add your pages inside the /pages folder.
-
-Use Radix UI components for consistent design.
-
-Manage state globally with Redux Toolkit and persist it using Redux Persist.
-
-Use Tailwind utilities and custom classes for rapid styling.
-
-Add forms using React Hook Form for validations and data handling.
-
-📄 License
-
-This project is open source and free to use under the MIT License.
+---

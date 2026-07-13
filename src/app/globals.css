@@ -5,17 +5,17 @@
 /* ===================================== */
 @theme {
   /* Brand */
-  --color-primary: 224 76% 48%;           /* Deep SaaS Blue */
+  --color-primary: 224 76% 48%; /* Deep SaaS Blue */
   --color-primary-foreground: 0 0% 100%;
 
-  --color-secondary: 230 70% 60%;         /* Soft Indigo */
+  --color-secondary: 230 70% 60%; /* Soft Indigo */
   --color-secondary-foreground: 0 0% 100%;
 
-  --color-accent: 262 83% 58%;            /* Modern Violet */
+  --color-accent: 262 83% 58%; /* Modern Violet */
   --color-accent-foreground: 0 0% 100%;
 
   /* Layout */
-  --color-background: 210 40% 98%;        /* Soft Gray Background */
+  --color-background: 210 40% 98%; /* Soft Gray Background */
   --color-foreground: 222 47% 11%;
 
   --color-surface: 0 0% 100%;
@@ -75,4 +75,7 @@
     background-color: hsl(var(--color-background));
     color: hsl(var(--color-foreground));
   }
+}
+html {
+  scroll-behavior: smooth;
 }
