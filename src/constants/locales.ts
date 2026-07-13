@@ -95,13 +95,13 @@ export const translations = {
     featured: {
       catalog: "আমাদের ক্যাটালগ",
       title: "শীর্ষ পাইকারি আমদানি ক্যাটাগরি",
-      desc: "直接 container sourced products যা বাংলাদেশের রাস্তায় দীর্ঘস্থায়িত্বের ফুল গ্যারান্টি দেয়।",
+      desc: "আমদানিকৃত প্রিমিয়াম যন্ত্রাংশ, যা বাংলাদেশের রাস্তায় দীর্ঘস্থায়িত্বের ফুল গ্যারান্টি দেয়।",
       btnText: "সম্পূর্ণ ইনভেন্টরি দেখুন",
       categories: [
         {
           title: "চায়না আমদানিকৃত ইলেকট্রিক অটো",
           tag: "যানবাহন",
-          image: "/images/rickshaw.png",
+          image: "/vehicles/4.png",
           features: [
             "ডিজিটাল স্মার্ট ড্যাশবোর্ড",
             "হেভি-ডিউটি শক শোষক (Absorbers)",
@@ -111,7 +111,7 @@ export const translations = {
         {
           title: "পানি ব্যাটারি",
           tag: "ব্যাটারি",
-          image: "/images/battery.png",
+          image: "/b-1.png",
           features: [
             "48V / 60V / 72V উপলব্ধ",
             "মাত্র ৩ ঘণ্টায় ফাস্ট চার্জ",
@@ -121,7 +121,7 @@ export const translations = {
         {
           title: "প্রিমিয়াম স্পেয়ার্স ও কন্ট্রোলার",
           tag: "খুচরা যন্ত্রাংশ",
-          image: "/images/parts.png",
+          image: "/p1.png",
           features: [
             "জেনুইন ফ্যাক্টরি স্পেয়ার্স",
             "বুয়েট (BUET) পরীক্ষিত মেকানিক্স",
@@ -405,7 +405,7 @@ export const translations = {
         {
           title: "China Imported Electric Autos",
           tag: "Vehicles",
-          image: "/images/rickshaw.png",
+          image: "/4.png",
           features: [
             "Digital Smart Dashboard",
             "Heavy-Duty Shock Absorbers",
@@ -415,7 +415,7 @@ export const translations = {
         {
           title: "Premium Lead-acid Batteries",
           tag: "Batteries",
-          image: "/images/battery.png",
+          image: "/b-1.png",
           features: [
             "48V / 60V / 72V Available",
             "Fast Charge in 3 Hours",
@@ -425,7 +425,7 @@ export const translations = {
         {
           title: "Premium Spares & Controllers",
           tag: "Spare Parts",
-          image: "/images/parts.png",
+          image: "/p1.png",
           features: [
             "Genuine Factory Spares",
             "BUET Tested Mechanics",
