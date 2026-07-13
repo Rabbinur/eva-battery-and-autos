@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 
 // 🛠️ টাইপ ডেфিনিশন
 interface PageProps {
-  params: Promise<{ lang: "en" | "bn" }>;
+  params: Promise<{ lang: string }>;
 }
 
 // 🚀 ১. স্ট্যাটিক সাইট বিল্ড/এক্সপোর্টের জন্য প্যারামস জেনারেট করা
@@ -81,16 +81,17 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
 export default async function Home({ params }: PageProps) {
   // ⚡ Promise থেকে lang প্যারামিটারটি বের করে নেওয়া হচ্ছে
   const { lang } = await params;
+  const language: "en" | "bn" = lang === "bn" ? "bn" : "en";
 
   return (
     <main>
       {/* 🎯 আপনার প্রতিটি সেকশনে ডাইনামিক ল্যাঙ্গুয়েজ প্রপস পাস করা হলো */}
-      <HeroSlider lang={lang} />
-      <ValueProp lang={lang} />
-      <FeaturedProducts lang={lang} />
-      <BatteryFocus lang={lang} />
-      <Partnership lang={lang} />
-      <CallToAction lang={lang} />
+      <HeroSlider lang={language} />
+      <ValueProp lang={language} />
+      <FeaturedProducts lang={language} />
+      <BatteryFocus lang={language} />
+      <Partnership lang={language} />
+      <CallToAction lang={language} />
     </main>
   );
 }

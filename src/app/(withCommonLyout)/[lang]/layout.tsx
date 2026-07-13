@@ -70,12 +70,13 @@ export default async function RootLayout({
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ lang: "en" | "bn" }>;
+  params: Promise<{ lang: string }>;
 }>) {
   const { lang } = await params;
+  const language: "en" | "bn" = lang === "bn" ? "bn" : "en";
 
   return (
-    <html lang={lang}>
+    <html lang={language}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -83,12 +84,12 @@ export default async function RootLayout({
           <div className="relative min-h-screen flex flex-col justify-between">
             {/* হেডারকে ল্যাঙ্গুয়েজ প্যারাম পাস করা হলো */}
             <div className="absolute top-0 left-0 w-full z-50">
-              <Header lang={lang} />
+              <Header lang={language} />
             </div>
 
             <main className="flex-1">{children}</main>
 
-            <Footer lang={lang} />
+            <Footer lang={language} />
           </div>
         </Provider>
       </body>
