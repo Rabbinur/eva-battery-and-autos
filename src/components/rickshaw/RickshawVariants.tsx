@@ -29,53 +29,7 @@ export default function RickshawVariants({
     null,
   );
 
-  const variantsData: RickshawItem[] = [
-    {
-      id: 1,
-      name: r.m1Name,
-      desc: r.m1Desc,
-      spec: r.m1Spec,
-      image:
-        "/vehicles/mini-borak.png",
-      tag: lang === "bn" ? "মিনি বোরাক" : "Mini Borak Series",
-    },
-    {
-      id: 2,
-      name: r.m2Name,
-      desc: r.m2Desc,
-      spec: r.m2Spec,
-      image:
-        "/vehicles/doyodo-borak.png",
-      tag: lang === "bn" ? "স্ট্যান্ডার্ড" : "Standard Model",
-    },
-    {
-      id: 3,
-      name: r.m2vName,
-      desc: r.m2vDesc,
-      spec: r.m2vSpec,
-      image:
-        "/vehicles/4.png",
-      tag: lang === "bn" ? "ভাও সিট ভ্যারিয়েন্ট" : "Vao Seat Edition",
-    },
-    {
-      id: 4,
-      name: r.m3Name,
-      desc: r.m3Desc,
-      spec: r.m3Spec,
-      image:
-        "/vehicles/sandy-borak.png",
-      tag: lang === "bn" ? "প্রিমিয়াম সিরিজ" : "Premium Sandy",
-    },
-    {
-      id: 5,
-      name: r.m3vName,
-      desc: r.m3vDesc,
-      spec: r.m3vSpec,
-      image:
-        "/vehicles/5.webp",
-      tag: lang === "bn" ? "লাক্সারি ভাও সিট" : "Luxury Vao Seat",
-    },
-  ];
+  const variantsData: RickshawItem[] = r.products || [];
 
   return (
     <div className="min-h-screen pb-20 relative">
