@@ -4,7 +4,7 @@ interface PageProps {
   params: Promise<{ lang: string }>;
 }
 
-export default async function BatteriesPage({ params }: PageProps) {
+export default async function WaterBatteriesPage({ params }: PageProps) {
   const { lang } = await params;
   const language: "en" | "bn" = lang === "bn" ? "bn" : "en";
 

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 
 import Footer from "@/components/Common/Footer";
 import Header from "@/components/Common/Header";
+import FloatingActions from "@/components/Common/FloatingActions";
 import Provider from "@/components/Provider/MainProvider";
 import "../../globals.css";
 
@@ -83,11 +84,12 @@ export default async function RootLayout({
         <Provider>
           <div className="relative min-h-screen flex flex-col justify-between">
             {/* হেডারকে ল্যাঙ্গুয়েজ প্যারাম পাস করা হলো */}
-            <div className="absolute top-0 left-0 w-full z-50">
-              <Header lang={language} />
-            </div>
+            <Header lang={language} />
 
             <main className="flex-1">{children}</main>
+
+            {/* ফ্লোটিং অ্যাকশন বাটনসমূহ (WhatsApp ও Call) */}
+            <FloatingActions />
 
             <Footer lang={language} />
           </div>

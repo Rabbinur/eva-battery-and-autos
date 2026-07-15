@@ -28,6 +28,17 @@ export default function Header({
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   const getLanguageTogglePath = () => {
     if (!pathname) return lang === "bn" ? "/en" : "/bn";
     const segments = pathname.split("/");
@@ -49,10 +60,10 @@ export default function Header({
       <div className="flex justify-between items-center px-4 sm:px-6 md:px-8 max-w-7xl w-full mx-auto">
         {/* লোগো সেকশন: স্ক্রল কন্ডিশন অনুযায়ী বর্ডার ও ব্যাকগ্রাউন্ড চেঞ্জ */}
         <div
-          className={`relative w-28 sm:w-36 h-10 md:h-12 flex items-center px-3 py-1 rounded-xl border transition-all duration-300 ${
+          className={`relative w-32 sm:w-40 h-10 md:h-12 flex items-center px-3 py-1 rounded-xl border transition-all duration-300 ${
             isScrolled
-              ? "bg-slate-50 border-slate-200 shadow-sm"
-              : "bg-white/10 backdrop-blur-sm border-white/10 shadow-sm"
+              ? "bg-slate-200 border-slate-200 shadow-sm"
+              : "bg-white /10 backdrop-blur-sm border-white/10 shadow-sm"
           }`}
         >
           <Link href={`/${lang}`}>
@@ -85,13 +96,13 @@ export default function Header({
             {t.header.home}
           </Link>
           <Link
-            href={`/${lang}/vehicles`}
+            href={`/${lang}/rickshaws`}
             className="hover:text-amber-500 transition-colors"
           >
             {t.header.vehicles}
           </Link>
           <Link
-            href={`/${lang}/batteries`}
+            href={`/${lang}/water-batteries`}
             className="hover:text-amber-500 transition-colors"
           >
             {t.header.batteries}
@@ -157,7 +168,7 @@ export default function Header({
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
-              className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 md:hidden"
+              className="fixed inset-0 bg-black/40 backdrop-blur-sm z-[90] md:hidden"
             />
 
             <motion.div
@@ -165,28 +176,29 @@ export default function Header({
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 left-0 h-full w-[280px] bg-white border-r border-slate-200 z-50 md:hidden flex flex-col p-6 shadow-2xl justify-between"
+              className="fixed top-0 left-0 h-[100dvh] w-[280px] bg-white border-r border-slate-200 z-[100] md:hidden flex flex-col shadow-2xl justify-between"
             >
-              <div>
-                <div className="flex justify-between items-center pb-6 border-b border-slate-100">
-                  <div className="relative w-24 h-8">
-                    <Image
-                      src="/eva-logo.png"
-                      alt="Logo"
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                  <button
-                    onClick={() => setIsOpen(false)}
-                    className="p-1.5 bg-slate-100 rounded-full hover:bg-slate-200 transition text-slate-800"
-                  >
-                    <X size={18} />
-                  </button>
+              {/* Header inside drawer */}
+              <div className="flex justify-between items-center p-6 border-b border-slate-100 shrink-0">
+                <div className="relative w-40 h-12">
+                  <Image
+                    src="/eva-logo.png"
+                    alt="Logo"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="p-1.5 bg-slate-100 rounded-full hover:bg-slate-200 transition text-slate-800"
+                >
+                  <X size={18} />
+                </button>
+              </div>
 
-                {/* মোবাইল স্ক্রিনের মেনু লিংক */}
-                <nav className="flex flex-col space-y-5 pt-8 font-bold text-base text-slate-800">
+              {/* Scrollable menu links area */}
+              <div className="flex-1 overflow-y-auto p-6">
+                <nav className="flex flex-col space-y-5 font-bold text-base text-slate-800">
                   <Link
                     href={`/${lang}`}
                     onClick={() => setIsOpen(false)}
@@ -195,20 +207,33 @@ export default function Header({
                     {t.header.home}
                   </Link>
                   <Link
-                    href={`/${lang}/vehicles`}
+                    href={`/${lang}/rickshaws`}
                     onClick={() => setIsOpen(false)}
                     className="hover:text-amber-600 pl-2 py-1 border-l-2 border-transparent hover:border-amber-500 transition"
                   >
                     {t.header.vehicles}
                   </Link>
                   <Link
-                    href={`/${lang}/batteries`}
+                    href={`/${lang}/water-batteries`}
                     onClick={() => setIsOpen(false)}
                     className="hover:text-amber-600 pl-2 py-1 border-l-2 border-transparent hover:border-amber-500 transition"
                   >
                     {t.header.batteries}
                   </Link>
-                 
+                  <Link
+                    href={`/${lang}/spare-parts`}
+                    onClick={() => setIsOpen(false)}
+                    className="hover:text-amber-600 pl-2 py-1 border-l-2 border-transparent hover:border-amber-500 transition"
+                  >
+                    {lang === "bn" ? "স্পেয়ার পার্টস" : "Spare Parts"}
+                  </Link>
+                  <Link
+                    href={`/${lang}/about`}
+                    onClick={() => setIsOpen(false)}
+                    className="hover:text-amber-600 pl-2 py-1 border-l-2 border-transparent hover:border-amber-500 transition"
+                  >
+                    {lang === "bn" ? "আমাদের সম্পর্কে" : "About Us"}
+                  </Link>
                   <Link
                     href={`/${lang}/contact`}
                     onClick={() => setIsOpen(false)}
@@ -219,8 +244,8 @@ export default function Header({
                 </nav>
               </div>
 
-              {/* মোবাইল ড্রয়ারের নিচের কল বাটন */}
-              <div className="pt-6 border-t border-slate-100">
+              {/* Call button inside drawer */}
+              <div className="p-6 border-t border-slate-100 shrink-0 bg-white">
                 <p className="text-xs text-slate-500 mb-2 font-semibold">
                   {lang === "bn"
                     ? "জরুরি প্রয়োজনে কল করুন"
