@@ -25,26 +25,7 @@ export default function WaterBattery({
   const [activeModel, setActiveModel] = useState<BatteryModel | null>(null);
 
   // 🎯 ডাইনামিক মডেল লিস্ট: ভবিষ্যতে নতুন মডেল আসলে জাস্ট এই অ্যারেতে অবজেক্ট বাড়িয়ে দেবেন
-  const batteryModels: BatteryModel[] = [
-    {
-      id: 1,
-      name: "Sun Power",
-      desc: w.sunPowerDesc,
-      tag: lang === "bn" ? "প্রিমিয়াম চয়েস" : "Premium Choice",
-    },
-    {
-      id: 2,
-      name: "Power Plus",
-      desc: w.powerPlusDesc,
-      tag: lang === "bn" ? "এক্সট্রা ব্যাকআপ" : "Extra Power",
-    },
-    {
-      id: 3,
-      name: "Kin Power",
-      desc: w.kinPowerDesc,
-      tag: lang === "bn" ? "বেস্ট ভ্যালু" : "Best Value",
-    },
-  ];
+  const batteryModels: BatteryModel[] = w.products || [];
 
   return (
     <div className="min-h-screen pb-20 relative">
