@@ -11,6 +11,7 @@ import {
   Youtube,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function Footer({
@@ -27,12 +28,12 @@ export default function Footer({
       <div className="max-w-7xl w-full mx-auto px-6 md:px-8 py-12 md:py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
         {/* ১ম কলাম: লোগো এবং কোম্পানি পরিচিতি */}
         <div className="space-y-5">
-          <div className="relative w-32 h-12 flex items-center">
+          <div className="relative w-32 h-12 flex items-center bg-white px-3 py-1.5 rounded-xl border border-white/10 shadow-sm">
             <Image
               src="/eva-logo.png"
               alt="EVA Logo"
               fill
-              className="object-contain filter drop-shadow-[0_2px_10px_rgba(255,255,255,0.3)]"
+              className="object-contain px-2 py-1 filter drop-shadow-[0_2px_8px_rgba(0,0,0,0.1)]"
             />
           </div>
           <p className="text-sm leading-relaxed text-gray-400">
@@ -68,7 +69,7 @@ export default function Footer({
           </h3>
           <ul className="space-y-3 text-sm font-medium">
             <li>
-              <a
+              <Link
                 href={`/${lang}`}
                 className="hover:text-amber-400 transition flex items-center group"
               >
@@ -77,20 +78,23 @@ export default function Footer({
                   size={14}
                   className="opacity-0 group-hover:opacity-100 ml-1 transition-all"
                 />
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href={`/${lang}/about`}
-                className="hover:text-amber-400 transition flex items-center group text-amber-400"
+                className="hover:text-amber-400 transition flex items-center group"
               >
                 {t.footer.navAbout}{" "}
-                <ArrowUpRight size={14} className="opacity-100 ml-1" />
-              </a>
+                <ArrowUpRight
+                  size={14}
+                  className="opacity-0 group-hover:opacity-100 ml-1 transition-all"
+                />
+              </Link>
             </li>
             <li>
-              <a
-                href={`/${lang}/vehicles`}
+              <Link
+                href={`/${lang}/rickshaws`}
                 className="hover:text-amber-400 transition flex items-center group"
               >
                 {t.footer.navFleet}
@@ -98,10 +102,10 @@ export default function Footer({
                   size={14}
                   className="opacity-0 group-hover:opacity-100 ml-1 transition-all"
                 />
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href={`/${lang}/contact`}
                 className="hover:text-amber-400 transition flex items-center group"
               >
@@ -110,7 +114,7 @@ export default function Footer({
                   size={14}
                   className="opacity-0 group-hover:opacity-100 ml-1 transition-all"
                 />
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -121,17 +125,25 @@ export default function Footer({
             {t.footer.titleProducts}
           </h3>
           <ul className="space-y-3 text-sm text-gray-400">
-            <li className="hover:text-white transition cursor-pointer">
-              {t.footer.prodRickshaw}
+            <li>
+              <Link href={`/${lang}/rickshaws`} className="hover:text-white transition cursor-pointer block">
+                {t.footer.prodRickshaw}
+              </Link>
             </li>
-            <li className="hover:text-white transition cursor-pointer">
-              {t.footer.prodBattery}
+            <li>
+              <Link href={`/${lang}/water-batteries`} className="hover:text-white transition cursor-pointer block">
+                {t.footer.prodBattery}
+              </Link>
             </li>
-            <li className="hover:text-white transition cursor-pointer">
-              {t.footer.prodParts}
+            <li>
+              <Link href={`/${lang}/spare-parts`} className="hover:text-white transition cursor-pointer block">
+                {t.footer.prodParts}
+              </Link>
             </li>
-            <li className="hover:text-white transition cursor-pointer">
-              {t.footer.prodSupport}
+            <li>
+              <Link href={`/${lang}/contact`} className="hover:text-white transition cursor-pointer block">
+                {t.footer.prodSupport}
+              </Link>
             </li>
           </ul>
         </div>
@@ -191,12 +203,12 @@ export default function Footer({
           </div>
           {/* পলিসি লিংকসমূহ */}
           <div className="flex space-x-6">
-            <a href="#" className="hover:text-gray-400 transition">
+            <Link href={`/${lang}/privacy`} className="hover:text-gray-400 transition cursor-pointer">
               {t.footer.privacy}
-            </a>
-            <a href="#" className="hover:text-gray-400 transition">
+            </Link>
+            <Link href={`/${lang}/terms`} className="hover:text-gray-400 transition cursor-pointer">
               {t.footer.terms}
-            </a>
+            </Link>
           </div>
         </div>
       </div>
