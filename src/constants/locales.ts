@@ -229,109 +229,117 @@ export const translations = {
 
     rickshawPage: {
       badge: "আমাদের থ্রি-হুইলার কালেকশন",
-
       bannerTitle: "মানসম্মত চায়না ইলেকট্রিক থ্রি-হুইলার",
-
       bannerDesc:
         "বিভিন্ন মডেলের চায়না ইলেকট্রিক থ্রি-হুইলার, যা দৈনন্দিন ব্যবহারের জন্য নির্ভরযোগ্য পারফরম্যান্স, আরাম এবং টেকসই নির্মাণ নিশ্চিত করে।",
-
       viewDetails: "বিস্তারিত দেখুন",
-
       specSpecs: "বৈশিষ্ট্যসমূহ",
-
       closeBtn: "বন্ধ করুন",
-
       modalTitle: "পণ্যের স্পেসিফিকেশন",
-
       specMotor: "মোটর ক্ষমতা",
       specBattery: "সাপোর্টেড ব্যাটারি",
       specRange: "রেঞ্জ",
       specSpeed: "সর্বোচ্চ গতি",
       specCapacity: "আসন ক্ষমতা",
       specChassis: "চেসিস",
-
       specMotorVal: "১০০০W - ১২০০W ব্রাশলেস মোটর",
       specBatteryVal: "৬০V / ৭২V Lead-acid Battery Supported",
       specRangeVal: "৮০ - ১০০ কিমি (পরিবেশ ও ব্যবহারের ওপর নির্ভরশীল)",
       specSpeedVal: "৩৫ - ৪০ কিমি/ঘণ্টা",
       specCapacityVal: "১ চালক + ৪-৫ যাত্রী",
       specChassisVal: "মজবুত স্টিল চেসিস",
-
-      m1Name: "16 Chaka Bangla Mini Borak",
-      m1Desc:
-        "ছোট রাস্তা ও শহুরে পরিবহনের জন্য উপযোগী কমপ্যাক্ট এবং নির্ভরযোগ্য মডেল।",
-      m1Spec: "কমপ্যাক্ট বডি • মজবুত সাসপেনশন • নির্ভরযোগ্য পারফরম্যান্স",
-
-      m2Name: "Doyodo Borak",
-      m2Desc:
-        "দৈনন্দিন যাত্রী পরিবহনের জন্য জনপ্রিয় এবং আরামদায়ক একটি মডেল।",
-      m2Spec: "স্ট্যান্ডার্ড সিট • নির্ভরযোগ্য মোটর • মজবুত চেসিস",
-
-      m2vName: "Sandy Mishuk",
-      m2vDesc:
-        "অতিরিক্ত বসার সুবিধাসহ আরামদায়ক এবং প্রশস্ত ডিজাইনের একটি মডেল।",
-      m2vSpec: "প্রশস্ত সিট • আরামদায়ক ডিজাইন • উন্নত স্পেস",
-
-      m3Name: "Sandy Borak",
-      m3Desc:
-        "আধুনিক ডিজাইন ও টেকসই নির্মাণের কারণে দীর্ঘমেয়াদি ব্যবহারের জন্য উপযোগী।",
-      m3Spec: "আধুনিক ডিজাইন • শক্তিশালী সাসপেনশন",
-
-      m3vName: "Sandy Borak Vao Seat",
-      m3vDesc:
-        "অতিরিক্ত যাত্রী ধারণক্ষমতা ও আরামদায়ক সিটিংয়ের জন্য উপযুক্ত একটি মডেল।",
-      m3vSpec: "বড় সিট • উন্নত আরাম • টেকসই নির্মাণ",
+      products: [
+        {
+          id: 1,
+          name: "16 Chaka Bangla Mini Borak",
+          desc: "ছোট রাস্তা ও শহুরে পরিবহনের জন্য উপযোগী কমপ্যাক্ট এবং নির্ভরযোগ্য মডেল।",
+          spec: "কমপ্যাক্ট বডি • মজবুত সাসপেনশন • নির্ভরযোগ্য পারফরম্যান্স",
+          image: "/vehicles/mini-borak.png",
+          tag: "মিনি বোরাক",
+        },
+        {
+          id: 2,
+          name: "Doyodo Borak",
+          desc: "দৈনন্দিন যাত্রী পরিবহনের জন্য জনপ্রিয় এবং আরামদায়ক একটি মডেল।",
+          spec: "স্ট্যান্ডার্ড সিট • নির্ভরযোগ্য মোটর • মজবুত চেসিস",
+          image: "/vehicles/doyodo-borak.png",
+          tag: "স্ট্যান্ডার্ড",
+        },
+        {
+          id: 3,
+          name: "Sandy Mishuk",
+          desc: "অতিরিক্ত বসার সুবিধাসহ আরামদায়ক এবং প্রশস্ত ডিজাইনের একটি মডেল।",
+          spec: "প্রশস্ত সিট • আরামদায়ক ডিজাইন • উন্নত স্পেস",
+          image: "/vehicles/4.png",
+          tag: "প্রিমিয়াম সিরিজ",
+        },
+        {
+          id: 4,
+          name: "Sandy Borak",
+          desc: "আধুনিক ডিজাইন ও টেকসই নির্মাণের কারণে দীর্ঘমেয়াদি ব্যবহারের জন্য উপযোগী।",
+          spec: "আধুনিক ডিজাইন • শক্তিশালী সাসপেনশন",
+          image: "/vehicles/sandy-borak.png",
+          tag: "প্রিমিয়াম সিরিজ",
+        },
+        {
+          id: 5,
+          name: "Sandy Borak Vao Seat",
+          desc: "অতিরিক্ত যাত্রী ধারণক্ষমতা ও আরামদায়ক সিটিংয়ের জন্য উপযুক্ত একটি মডেল।",
+          spec: "বড় সিট • উন্নত আরাম • টেকসই নির্মাণ",
+          image: "/vehicles/5.webp",
+          tag: "লাক্সারি ভাও সিট",
+        }
+      ]
     },
 
     waterBatteryPage: {
       badge: "আমাদের চায়না পানি ব্যাটারি কালেকশন",
-
       bannerTitle: "মানসম্মত চায়না লিড-অ্যাসিড (পানি) ব্যাটারি",
-
       bannerDesc:
         "বিশ্বস্ত ব্র্যান্ডের চায়না লিড-অ্যাসিড (পানি) ব্যাটারি, যা ইলেকট্রিক থ্রি-হুইলারের দৈনন্দিন ব্যবহারের জন্য নির্ভরযোগ্য পারফরম্যান্স প্রদান করে।",
-
       availableModels: "উপলব্ধ মডেলসমূহ",
-
       featuresTitle: "কেন আমাদের ব্যাটারি নির্বাচন করবেন?",
-
       specsTitle: "পণ্যের স্পেসিফিকেশন",
-
       viewSpecs: "স্পেসিফিকেশন দেখুন",
-
       closeBtn: "বন্ধ করুন",
-
       f1Title: "দীর্ঘস্থায়ী ব্যাকআপ",
       f1Desc:
         "দৈনন্দিন ব্যবহারের জন্য স্থিতিশীল পারফরম্যান্স ও নির্ভরযোগ্য ব্যাকআপ।",
-
       f2Title: "টেকসই নির্মাণ",
       f2Desc:
         "নিয়মিত ব্যবহারের জন্য উপযোগী শক্তিশালী ও নির্ভরযোগ্য নির্মাণ।",
-
       f3Title: "ওয়ারেন্টি সুবিধা",
       f3Desc:
         "নির্ধারিত শর্ত অনুযায়ী ওয়ারেন্টি সুবিধা প্রদান করা হয়।",
-
-      sunPowerDesc:
-        "নির্ভরযোগ্য পারফরম্যান্সের জন্য জনপ্রিয় একটি চায়না পানি ব্যাটারি।",
-
-      powerPlusDesc:
-        "স্থিতিশীল পারফরম্যান্স ও দীর্ঘ ব্যবহারের জন্য উপযোগী একটি মডেল।",
-
-      kinPowerDesc:
-        "সাশ্রয়ী মূল্যে নির্ভরযোগ্য পারফরম্যান্স প্রদানকারী ব্যাটারি।",
-
       specBrand: "ব্র্যান্ড / মডেল",
       specVoltage: "ভোল্টেজ",
       specCapacity: "ক্যাপাসিটি (Ah)",
       specWarranty: "ওয়ারেন্টি",
       specTech: "প্রযুক্তি",
-
       specVoltageVal: "60V (12V × 5) / 72V (12V × 6)",
       specCapacityVal: "130Ah / 140Ah / 150Ah",
       specWarrantyVal: "প্রযোজ্য শর্ত অনুযায়ী",
       specTechVal: "Lead-acid (Water Battery)",
+      products: [
+        {
+          id: 1,
+          name: "Sun Power",
+          desc: "নির্ভরযোগ্য পারফরম্যান্সের জন্য জনপ্রিয় একটি চায়না পানি ব্যাটারি।",
+          tag: "প্রিমিয়াম চয়েস",
+        },
+        {
+          id: 2,
+          name: "Power Plus",
+          desc: "স্থিতিশীল পারফরম্যান্স ও দীর্ঘ ব্যবহারের জন্য উপযোগী একটি মডেল।",
+          tag: "এক্সট্রা ব্যাকআপ",
+        },
+        {
+          id: 3,
+          name: "Kin Power",
+          desc: "সাশ্রয়ী মূল্যে নির্ভরযোগ্য পারফরম্যান্স প্রদানকারী ব্যাটারি।",
+          tag: "বেস্ট ভ্যালু",
+        }
+      ]
     },
   },
   en: {
@@ -564,106 +572,117 @@ export const translations = {
 
     rickshawPage: {
       badge: "Our Three-Wheeler Collection",
-
       bannerTitle: "Quality China-Made Electric Three-Wheelers",
-
       bannerDesc:
         "Explore our range of reliable China-made electric three-wheelers designed for everyday transportation, durability, and comfortable driving.",
-
       viewDetails: "View Details",
       specSpecs: "Specifications",
       closeBtn: "Close",
       modalTitle: "Product Specifications",
-
       specMotor: "Motor Power",
       specBattery: "Supported Battery",
       specRange: "Estimated Range",
       specSpeed: "Top Speed",
       specCapacity: "Seating Capacity",
       specChassis: "Chassis",
-
       specMotorVal: "1000W - 1200W Brushless Motor",
       specBatteryVal: "60V / 72V Lead-Acid Battery",
       specRangeVal: "Up to 80 - 100 km (Depending on usage)",
       specSpeedVal: "35 - 40 km/h",
       specCapacityVal: "1 Driver + 4-5 Passengers",
       specChassisVal: "Heavy-Duty Steel Chassis",
-
-      m1Name: "16 Chaka Bangla Mini Borak",
-      m1Desc:
-        "A compact and dependable model suitable for urban roads and everyday passenger transport.",
-      m1Spec: "Compact Body • Strong Suspension • Reliable Performance",
-
-      m2Name: "Sandy Mini",
-      m2Desc:
-        "A popular model featuring comfortable seating, durable construction, and dependable performance.",
-      m2Spec: "Standard Seating • Reliable Motor • Durable Chassis",
-
-      m2vName: "Sandy Mishuk",
-      m2vDesc:
-        "Designed with additional seating space for greater passenger comfort and convenience.",
-      m2vSpec: "Spacious Seating • Comfortable Interior • Practical Design",
-
-      m3Name: "Sandy Borak",
-      m3Desc:
-        "A modern model with durable construction, suitable for regular commercial use.",
-      m3Spec: "Modern Design • Strong Suspension",
-
-      m3vName: "Sandy Borak Vao Seat",
-      m3vDesc:
-        "Built with larger seating capacity and enhanced comfort for commercial transportation.",
-      m3vSpec: "Large Seating • Comfortable Ride • Durable Build",
+      products: [
+        {
+          id: 1,
+          name: "16 Chaka Bangla Mini Borak",
+          desc: "A compact and dependable model suitable for urban roads and everyday passenger transport.",
+          spec: "Compact Body • Strong Suspension • Reliable Performance",
+          image: "/vehicles/mini-borak.png",
+          tag: "Mini Borak Series",
+        },
+        {
+          id: 2,
+          name: "Sandy Mini",
+          desc: "A popular model featuring comfortable seating, durable construction, and dependable performance.",
+          spec: "Standard Seating • Reliable Motor • Durable Chassis",
+          image: "/vehicles/doyodo-borak.png",
+          tag: "Standard Model",
+        },
+        {
+          id: 3,
+          name: "Sandy Mishuk",
+          desc: "Designed with additional seating space for greater passenger comfort and convenience.",
+          spec: "Spacious Seating • Comfortable Interior • Practical Design",
+          image: "/vehicles/4.png",
+          tag: "Premium Mishuk",
+        },
+        {
+          id: 4,
+          name: "Sandy Borak",
+          desc: "A modern model with durable construction, suitable for regular commercial use.",
+          spec: "Modern Design • Strong Suspension",
+          image: "/vehicles/sandy-borak.png",
+          tag: "Premium Sandy",
+        },
+        {
+          id: 5,
+          name: "Sandy Borak Vao Seat",
+          desc: "Built with larger seating capacity and enhanced comfort for commercial transportation.",
+          spec: "Large Seating • Comfortable Ride • Durable Build",
+          image: "/vehicles/5.webp",
+          tag: "Luxury Vao Seat",
+        }
+      ]
     },
 
     waterBatteryPage: {
       badge: "Our China Lead-Acid Battery Collection",
-
       bannerTitle: "Quality China Lead-Acid (Water) Batteries",
-
       bannerDesc:
         "Browse our selection of quality China-made lead-acid (water) batteries designed to deliver dependable performance for electric three-wheelers.",
-
       availableModels: "Available Models",
-
       featuresTitle: "Why Choose Our Batteries?",
-
       specsTitle: "Product Specifications",
-
       viewSpecs: "View Specifications",
-
       closeBtn: "Close",
-
       f1Title: "Reliable Backup",
       f1Desc:
         "Designed to provide dependable power for everyday electric vehicle use.",
-
       f2Title: "Durable Construction",
       f2Desc:
         "Built with quality materials for reliable day-to-day performance.",
-
       f3Title: "Warranty Support",
       f3Desc:
         "Warranty service is available according to the applicable product terms.",
-
-      sunPowerDesc:
-        "A dependable China-made lead-acid battery trusted for consistent everyday performance.",
-
-      powerPlusDesc:
-        "Designed to deliver stable power output and reliable operation.",
-
-      kinPowerDesc:
-        "A cost-effective battery offering dependable performance for daily use.",
-
       specBrand: "Brand / Model",
       specVoltage: "Voltage",
       specCapacity: "Capacity (Ah)",
       specWarranty: "Warranty",
       specTech: "Technology",
-
       specVoltageVal: "60V (12V × 5) / 72V (12V × 6)",
       specCapacityVal: "130Ah / 140Ah / 150Ah",
       specWarrantyVal: "As Per Product Warranty Policy",
       specTechVal: "Lead-Acid (Water Battery)",
+      products: [
+        {
+          id: 1,
+          name: "Sun Power",
+          desc: "A dependable China-made lead-acid battery trusted for consistent everyday performance.",
+          tag: "Premium Choice",
+        },
+        {
+          id: 2,
+          name: "Power Plus",
+          desc: "Designed to deliver stable power output and reliable operation.",
+          tag: "Extra Power",
+        },
+        {
+          id: 3,
+          name: "Kin Power",
+          desc: "A cost-effective battery offering dependable performance for daily use.",
+          tag: "Best Value",
+        }
+      ]
     },
 
 
